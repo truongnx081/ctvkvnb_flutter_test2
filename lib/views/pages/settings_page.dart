@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_4/views/pages/explanded_and_flexible_test.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({
@@ -146,12 +147,19 @@ class _ProfilePageState extends State<SettingsPage> {
             ),
             ElevatedButton(
               onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return ExpandedAndFlexibleTest();
+                    },
+                    )
+                );
               },
               style:ElevatedButton.styleFrom(
-                backgroundColor: Colors.teal,
-                foregroundColor: Colors.white,
+                // backgroundColor: Colors.teal,
+                // foregroundColor: Colors.white,
               ),
-              child: Text("CLick ElevatedButton"),
+              child: Text("Show Flexible and Expanded"),
             ),
 
             FilledButton(
